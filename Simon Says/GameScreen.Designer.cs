@@ -38,7 +38,7 @@
             // 
             this.redButton.BackColor = System.Drawing.Color.Red;
             this.redButton.ForeColor = System.Drawing.Color.Red;
-            this.redButton.Location = new System.Drawing.Point(162, 68);
+            this.redButton.Location = new System.Drawing.Point(151, 69);
             this.redButton.Name = "redButton";
             this.redButton.Size = new System.Drawing.Size(59, 61);
             this.redButton.TabIndex = 0;
@@ -49,7 +49,7 @@
             // 
             this.greenButton.BackColor = System.Drawing.Color.LawnGreen;
             this.greenButton.ForeColor = System.Drawing.Color.LawnGreen;
-            this.greenButton.Location = new System.Drawing.Point(82, 68);
+            this.greenButton.Location = new System.Drawing.Point(71, 69);
             this.greenButton.Name = "greenButton";
             this.greenButton.Size = new System.Drawing.Size(59, 61);
             this.greenButton.TabIndex = 1;
@@ -60,7 +60,7 @@
             // 
             this.yellowButton.BackColor = System.Drawing.Color.Yellow;
             this.yellowButton.ForeColor = System.Drawing.Color.Yellow;
-            this.yellowButton.Location = new System.Drawing.Point(82, 149);
+            this.yellowButton.Location = new System.Drawing.Point(71, 150);
             this.yellowButton.Name = "yellowButton";
             this.yellowButton.Size = new System.Drawing.Size(59, 61);
             this.yellowButton.TabIndex = 2;
@@ -71,7 +71,7 @@
             // 
             this.blueButton.BackColor = System.Drawing.Color.Blue;
             this.blueButton.ForeColor = System.Drawing.Color.Blue;
-            this.blueButton.Location = new System.Drawing.Point(162, 149);
+            this.blueButton.Location = new System.Drawing.Point(151, 150);
             this.blueButton.Name = "blueButton";
             this.blueButton.Size = new System.Drawing.Size(59, 61);
             this.blueButton.TabIndex = 3;
