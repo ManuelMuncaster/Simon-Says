@@ -15,6 +15,9 @@ namespace Simon_Says
         public Form1()
         {
             InitializeComponent();
+            MainScreen ms = new MainScreen();
+            this.Controls.Add(ms);
+                
         }
     }
 }

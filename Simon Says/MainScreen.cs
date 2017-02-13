@@ -16,5 +16,14 @@ namespace Simon_Says
         {
             InitializeComponent();
         }
+
+        private void startGame_Click(object sender, EventArgs e)
+        {
+            Form f = FindForm();
+            this.Controls.Remove(this);
+
+            GameScreen gs = new GameScreen();
+            f.Controls.Add(gs);
+        }
     }
 }
