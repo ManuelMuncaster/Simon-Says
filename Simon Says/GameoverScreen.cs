@@ -16,5 +16,14 @@ namespace Simon_Says
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form f = FindForm();
+            f.Controls.Remove(this);
+
+            MainScreen ms = new MainScreen();
+            f.Controls.Add(ms);
+        }
     }
 }

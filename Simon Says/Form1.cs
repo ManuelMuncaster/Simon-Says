@@ -17,7 +17,10 @@ namespace Simon_Says
             InitializeComponent();
             MainScreen ms = new MainScreen();
             this.Controls.Add(ms);
+        }
+
+           public static List<int> pattern = new List<int>();
+        
                 
         }
     }
-}

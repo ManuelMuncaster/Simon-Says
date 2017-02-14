@@ -37,46 +37,50 @@
             // redButton
             // 
             this.redButton.BackColor = System.Drawing.Color.Red;
-            this.redButton.ForeColor = System.Drawing.Color.Red;
+            this.redButton.ForeColor = System.Drawing.Color.Transparent;
             this.redButton.Location = new System.Drawing.Point(151, 69);
             this.redButton.Name = "redButton";
             this.redButton.Size = new System.Drawing.Size(59, 61);
             this.redButton.TabIndex = 0;
             this.redButton.Text = "button1";
             this.redButton.UseVisualStyleBackColor = false;
+            this.redButton.Click += new System.EventHandler(this.redButton_Click);
             // 
             // greenButton
             // 
             this.greenButton.BackColor = System.Drawing.Color.LawnGreen;
-            this.greenButton.ForeColor = System.Drawing.Color.LawnGreen;
+            this.greenButton.ForeColor = System.Drawing.Color.Transparent;
             this.greenButton.Location = new System.Drawing.Point(71, 69);
             this.greenButton.Name = "greenButton";
             this.greenButton.Size = new System.Drawing.Size(59, 61);
             this.greenButton.TabIndex = 1;
             this.greenButton.Text = "button2";
             this.greenButton.UseVisualStyleBackColor = false;
+            this.greenButton.Click += new System.EventHandler(this.greenButton_Click);
             // 
             // yellowButton
             // 
             this.yellowButton.BackColor = System.Drawing.Color.Yellow;
-            this.yellowButton.ForeColor = System.Drawing.Color.Yellow;
+            this.yellowButton.ForeColor = System.Drawing.Color.Transparent;
             this.yellowButton.Location = new System.Drawing.Point(71, 150);
             this.yellowButton.Name = "yellowButton";
             this.yellowButton.Size = new System.Drawing.Size(59, 61);
             this.yellowButton.TabIndex = 2;
             this.yellowButton.Text = "button3";
             this.yellowButton.UseVisualStyleBackColor = false;
+            this.yellowButton.Click += new System.EventHandler(this.yellowButton_Click);
             // 
             // blueButton
             // 
             this.blueButton.BackColor = System.Drawing.Color.Blue;
-            this.blueButton.ForeColor = System.Drawing.Color.Blue;
+            this.blueButton.ForeColor = System.Drawing.Color.Transparent;
             this.blueButton.Location = new System.Drawing.Point(151, 150);
             this.blueButton.Name = "blueButton";
             this.blueButton.Size = new System.Drawing.Size(59, 61);
             this.blueButton.TabIndex = 3;
             this.blueButton.Text = "button1";
             this.blueButton.UseVisualStyleBackColor = false;
+            this.blueButton.Click += new System.EventHandler(this.blueButton_Click);
             // 
             // GameScreen
             // 
@@ -89,6 +93,7 @@
             this.Controls.Add(this.redButton);
             this.Name = "GameScreen";
             this.Size = new System.Drawing.Size(300, 300);
+            this.Load += new System.EventHandler(this.GameScreen_Load);
             this.ResumeLayout(false);
 
         }

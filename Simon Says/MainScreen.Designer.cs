@@ -50,6 +50,7 @@
             this.exitGame.TabIndex = 1;
             this.exitGame.Text = "Exit";
             this.exitGame.UseVisualStyleBackColor = true;
+            this.exitGame.Click += new System.EventHandler(this.exitGame_Click);
             // 
             // MainScreen
             // 

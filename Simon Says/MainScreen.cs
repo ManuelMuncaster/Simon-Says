@@ -20,10 +20,15 @@ namespace Simon_Says
         private void startGame_Click(object sender, EventArgs e)
         {
             Form f = FindForm();
-            this.Controls.Remove(this);
+            f.Controls.Remove(this);
 
             GameScreen gs = new GameScreen();
             f.Controls.Add(gs);
+        }
+
+        private void exitGame_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
