@@ -22,22 +22,101 @@ namespace Simon_Says
 
         private void greenButton_Click(object sender, EventArgs e)
         {
+            if (Form1.pattern[guess] == 2)
+            {
+                Refresh();
+                Thread.Sleep(250);
+                greenButton.BackColor = Color.Gray;
+                Refresh();
+                Thread.Sleep(250);
+                greenButton.BackColor = Color.Green;
+                Refresh();
 
+                guess++;
+                Thread.Sleep(1500);
+                if (Form1.pattern.Count() == guess)
+                {
+                    computerTurn();
+                }
+            }
+            else
+            {
+                GameOver();
+            }
         }
 
         private void redButton_Click(object sender, EventArgs e)
         {
+            if (Form1.pattern[guess] == 1)
+            {
+                Refresh();
+                Thread.Sleep(250);
+                redButton.BackColor = Color.Gray;
+                Refresh();
+                Thread.Sleep(250);
+                redButton.BackColor = Color.Red;
+                Refresh();
 
+                guess++;
+                Thread.Sleep(1500);
+                if (Form1.pattern.Count() == guess)
+                {
+                    computerTurn();
+                }
+            }
+            else
+            {
+                GameOver();
+            }
         }
 
         private void blueButton_Click(object sender, EventArgs e)
         {
+            if (Form1.pattern[guess] == 3)
+            {
+                Refresh();
+                Thread.Sleep(250);
+                blueButton.BackColor = Color.Gray;
+                Refresh();
+                Thread.Sleep(250);
+                blueButton.BackColor = Color.Blue;
+                Refresh();
 
+                guess++;
+                Thread.Sleep(1500);
+                if (Form1.pattern.Count() == guess)
+                {
+                    computerTurn();
+                }
+            }
+            else
+            {
+                GameOver();
+            }
         }
 
         private void yellowButton_Click(object sender, EventArgs e)
         {
-
+            if (Form1.pattern[guess] == 4)
+            {
+                Refresh();
+                Thread.Sleep(250);
+                yellowButton.BackColor = Color.Gray;
+                Refresh();
+                Thread.Sleep(250);
+                yellowButton.BackColor = Color.Yellow;
+                Refresh();
+        
+                Thread.Sleep(1500);
+                if (Form1.pattern.Count() == guess)
+                {
+                    computerTurn();
+                }
+            }
+            else
+            {
+                GameOver();
+            }
         }
 
         private void GameScreen_Load(object sender, EventArgs e)
@@ -48,11 +127,10 @@ namespace Simon_Says
         }
         public void computerTurn()
         {
-            int button;
             Random randGen = new Random();
-            button = randGen.Next(0, 5);
+            guess = randGen.Next(1, 5);
 
-            Form1.pattern.Add(button);
+            Form1.pattern.Add(guess);
 
             for (int i = 0; i < Form1.pattern.Count; i++)
             { 
@@ -98,10 +176,17 @@ namespace Simon_Says
                     yellowButton.BackColor = Color.Yellow;
 
                 }
-
-                button = 0;
+                guess = 0;
             }
 
+        }
+        public void GameOver()
+        {
+            Form f = FindForm();
+            f.Controls.Remove(this);
+
+            GameoverScreen gs = new GameoverScreen();
+            f.Controls.Add(gs);
         }
     }
 }
