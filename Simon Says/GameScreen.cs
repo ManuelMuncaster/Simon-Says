@@ -187,6 +187,7 @@ namespace Simon_Says
 
             GameoverScreen gs = new GameoverScreen();
             f.Controls.Add(gs);
+
         }
     }
 }
