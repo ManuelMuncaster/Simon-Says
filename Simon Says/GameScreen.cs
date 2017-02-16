@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Media;
 
 namespace Simon_Says
 {
@@ -19,13 +20,13 @@ namespace Simon_Says
         {
             InitializeComponent();
         }
-
         private void greenButton_Click(object sender, EventArgs e)
         {
+            Form1.sound.Add(3);
+            Sound();
             if (Form1.pattern[guess] == 2)
             {
                 Refresh();
-                Thread.Sleep(250);
                 greenButton.BackColor = Color.Gray;
                 Refresh();
                 Thread.Sleep(250);
@@ -33,24 +34,26 @@ namespace Simon_Says
                 Refresh();
 
                 guess++;
-                Thread.Sleep(1500);
                 if (Form1.pattern.Count() == guess)
                 {
+                    Thread.Sleep(1500);
                     computerTurn();
                 }
             }
             else
             {
+                Form1.sound.Add(5);
+                Sound();
                 GameOver();
             }
         }
-
         private void redButton_Click(object sender, EventArgs e)
         {
+            Form1.sound.Add(2);
+            Sound();
             if (Form1.pattern[guess] == 1)
             {
                 Refresh();
-                Thread.Sleep(250);
                 redButton.BackColor = Color.Gray;
                 Refresh();
                 Thread.Sleep(250);
@@ -58,24 +61,26 @@ namespace Simon_Says
                 Refresh();
 
                 guess++;
-                Thread.Sleep(1500);
                 if (Form1.pattern.Count() == guess)
                 {
+                    Thread.Sleep(1500);
                     computerTurn();
                 }
             }
             else
             {
+                Form1.sound.Add(5);
+                Sound();
                 GameOver();
             }
         }
-
         private void blueButton_Click(object sender, EventArgs e)
         {
+            Form1.sound.Add(1);
+            Sound();
             if (Form1.pattern[guess] == 3)
             {
                 Refresh();
-                Thread.Sleep(250);
                 blueButton.BackColor = Color.Gray;
                 Refresh();
                 Thread.Sleep(250);
@@ -83,47 +88,50 @@ namespace Simon_Says
                 Refresh();
 
                 guess++;
-                Thread.Sleep(1500);
                 if (Form1.pattern.Count() == guess)
                 {
+                    Thread.Sleep(1500);
                     computerTurn();
                 }
             }
             else
             {
+                Form1.sound.Add(5);
+                Sound();
                 GameOver();
             }
         }
-
         private void yellowButton_Click(object sender, EventArgs e)
         {
+            Form1.sound.Add(4);
+            Sound();
             if (Form1.pattern[guess] == 4)
             {
                 Refresh();
-                Thread.Sleep(250);
                 yellowButton.BackColor = Color.Gray;
                 Refresh();
                 Thread.Sleep(250);
                 yellowButton.BackColor = Color.Yellow;
                 Refresh();
-        
-                Thread.Sleep(1500);
+
+                guess++;
                 if (Form1.pattern.Count() == guess)
                 {
+                    Thread.Sleep(1500);
                     computerTurn();
                 }
             }
             else
             {
+                Form1.sound.Add(5);
+                Sound();
                 GameOver();
             }
         }
-
         private void GameScreen_Load(object sender, EventArgs e)
         {
             Form1.pattern.Clear();
             computerTurn();
-
         }
         public void computerTurn()
         {
@@ -143,7 +151,6 @@ namespace Simon_Says
                     Refresh();
                     Thread.Sleep(500);
                     redButton.BackColor = Color.Red;
-
                 }
                 else if (Form1.pattern[i] == 2)
                 {
@@ -174,11 +181,9 @@ namespace Simon_Says
                     Refresh();
                     Thread.Sleep(500);
                     yellowButton.BackColor = Color.Yellow;
-
                 }
                 guess = 0;
             }
-
         }
         public void GameOver()
         {
@@ -187,7 +192,39 @@ namespace Simon_Says
 
             GameoverScreen gs = new GameoverScreen();
             f.Controls.Add(gs);
+        }
+        public void Sound()
+        {
 
+            SoundPlayer bluePlayer = new SoundPlayer(Properties.Resources.blue);
+            SoundPlayer redPlayer = new SoundPlayer(Properties.Resources.red);
+            SoundPlayer greenPlayer = new SoundPlayer(Properties.Resources.green);
+            SoundPlayer yellowPlayer = new SoundPlayer(Properties.Resources.yellow);
+            SoundPlayer errorPlayer = new SoundPlayer(Properties.Resources.mistake);
+
+            for (int s = 0; s < Form1.sound.Count; s++)
+            {
+                if (Form1.sound[s] == 1)
+                {
+                    bluePlayer.Play();
+                }
+                else if (Form1.sound[s] == 2)
+                {
+                    redPlayer.Play();
+                }
+                else if (Form1.sound[s] == 3)
+                {
+                    greenPlayer.Play();
+                }
+                else if (Form1.sound[s] == 4)
+                {
+                    yellowPlayer.Play();
+                }
+                else if (Form1.sound[s] == 5)
+                {
+                    errorPlayer.Play();
+                }
+            }
         }
     }
 }

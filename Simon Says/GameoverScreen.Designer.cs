@@ -38,7 +38,7 @@
             // 
             this.gameoverLabel.AutoSize = true;
             this.gameoverLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gameoverLabel.Location = new System.Drawing.Point(51, 42);
+            this.gameoverLabel.Location = new System.Drawing.Point(41, 23);
             this.gameoverLabel.Name = "gameoverLabel";
             this.gameoverLabel.Size = new System.Drawing.Size(200, 39);
             this.gameoverLabel.TabIndex = 0;
@@ -48,7 +48,7 @@
             // 
             this.patternlengthLabel.AutoSize = true;
             this.patternlengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patternlengthLabel.Location = new System.Drawing.Point(24, 95);
+            this.patternlengthLabel.Location = new System.Drawing.Point(34, 79);
             this.patternlengthLabel.Name = "patternlengthLabel";
             this.patternlengthLabel.Size = new System.Drawing.Size(186, 22);
             this.patternlengthLabel.TabIndex = 1;
@@ -58,7 +58,7 @@
             // 
             this.patternnumberLabel.AutoSize = true;
             this.patternnumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patternnumberLabel.Location = new System.Drawing.Point(216, 95);
+            this.patternnumberLabel.Location = new System.Drawing.Point(226, 79);
             this.patternnumberLabel.Name = "patternnumberLabel";
             this.patternnumberLabel.Size = new System.Drawing.Size(58, 22);
             this.patternnumberLabel.TabIndex = 2;
@@ -67,7 +67,7 @@
             // button1
             // 
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(109, 165);
+            this.button1.Location = new System.Drawing.Point(109, 119);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 3;

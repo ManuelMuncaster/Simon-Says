@@ -20,6 +20,9 @@ namespace Simon_Says
         }
 
            public static List<int> pattern = new List<int>();
+           public static List<int> sound = new List<int>();
+
+        
         
                 
         }

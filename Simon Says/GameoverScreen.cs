@@ -15,6 +15,7 @@ namespace Simon_Says
         public GameoverScreen()
         {
             InitializeComponent();
+            patternnumberLabel.Text = "" + Form1.pattern.Count();
         }
 
         private void button1_Click(object sender, EventArgs e)
