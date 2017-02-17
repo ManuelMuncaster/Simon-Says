@@ -18,7 +18,7 @@ namespace Simon_Says
         }
 
         private void startGame_Click(object sender, EventArgs e)
-        {
+        {   //Loads the Gamescreen when the start button is pressed
             Form f = FindForm();
             f.Controls.Remove(this);
 
@@ -27,7 +27,7 @@ namespace Simon_Says
         }
 
         private void exitGame_Click(object sender, EventArgs e)
-        {
+        {   //Closes the game when exit button is pressed
             Application.Exit();
         }
     }

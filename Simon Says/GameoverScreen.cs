@@ -15,11 +15,12 @@ namespace Simon_Says
         public GameoverScreen()
         {
             InitializeComponent();
+            //Displays what pattern the player failed on
             patternnumberLabel.Text = "" + Form1.pattern.Count();
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
+        {  //This allows the player to return to the MainScreen
             Form f = FindForm();
             f.Controls.Remove(this);
 

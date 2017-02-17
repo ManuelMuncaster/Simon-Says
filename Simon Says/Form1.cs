@@ -1,4 +1,7 @@
-﻿using System;
+﻿//Created by: Manuel Muncaster
+//Date: February 14, 2017
+//Purpose: This is a replica of the electronic game "Simon Says"
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +21,7 @@ namespace Simon_Says
             MainScreen ms = new MainScreen();
             this.Controls.Add(ms);
         }
+        //Setting up lists
 
            public static List<int> pattern = new List<int>();
            public static List<int> sound = new List<int>();
